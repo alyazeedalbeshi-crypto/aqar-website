@@ -1,0 +1,81 @@
+@import "tailwindcss";
+@import "@fontsource/ibm-plex-sans-arabic/300.css";
+@import "@fontsource/ibm-plex-sans-arabic/400.css";
+@import "@fontsource/ibm-plex-sans-arabic/500.css";
+@import "@fontsource/ibm-plex-sans-arabic/600.css";
+@import "@fontsource/ibm-plex-sans-arabic/700.css";
+
+@theme {
+  --font-sans: "IBM Plex Sans Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+
+  --color-navy-950: #061227;
+  --color-navy-900: #0b1f3a;
+  --color-navy-800: #112b4f;
+  --color-navy-700: #183a66;
+  --color-navy-600: #214b80;
+  --color-navy-500: #2f609c;
+
+  --color-ivory-50: #fbf9f4;
+  --color-ivory-100: #f5f1e8;
+  --color-ivory-200: #ebe4d4;
+  --color-ivory-300: #d9cfb8;
+  --color-ivory-400: #bfb299;
+
+  --color-sky-300: #9cc4ea;
+  --color-sky-400: #7fb2e5;
+  --color-sky-500: #5c97d1;
+
+  --color-ink: #0b1f3a;
+  --color-muted: #5b6474;
+
+  --tracking-wide-ar: 0.02em;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-ivory-100);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga", "calt";
+  line-height: 1.7;
+}
+
+::selection {
+  background: var(--color-navy-800);
+  color: var(--color-ivory-100);
+}
+
+/* خطوط فاصلة رفيعة بأسلوب الكتيب */
+.hairline {
+  border-color: color-mix(in srgb, currentColor 18%, transparent);
+}
+
+.num {
+  font-variant-numeric: tabular-nums lining-nums;
+}
+
+/* إبراز التركيز لعناصر التفاعل */
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--color-sky-400);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
