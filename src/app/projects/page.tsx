@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+import { PageBanner } from "@/components/ui/PageBanner";
+import { jeddahImages } from "@/content/company";
 import { ButtonLink } from "@/components/ui/Button";
 import { PROJECTS_DEMO_NOTICE, projectPlaceholders } from "@/content/projects";
 
@@ -11,9 +12,10 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <section className="py-16 sm:py-24">
+    <>
+    <PageBanner title="مشاريع تحت الإنشاء" lead={PROJECTS_DEMO_NOTICE} image={jeddahImages.aerialNorth} />
+    <section className="py-16 sm:py-20">
       <Container className="space-y-12">
-        <SectionHeading as="h1" eyebrow="قريبًا" title="مشاريع تحت الإنشاء" lead={PROJECTS_DEMO_NOTICE} />
 
         <p className="border-s-2 border-sky-500 bg-sky-300/15 px-4 py-3 text-sm text-navy-800" role="note">
           قسم تجريبي — المواضع أدناه فارغة عمدًا، وتُستبدل بالمشاريع الفعلية (الاسم، الموقع، الصور، الحالة) عند توفيرها من الشركة.
@@ -37,5 +39,6 @@ export default function ProjectsPage() {
         </div>
       </Container>
     </section>
+    </>
   );
 }

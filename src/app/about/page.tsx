@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { Eyebrow } from "@/components/ui/Eyebrow";
+import { PageBanner } from "@/components/ui/PageBanner";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ButtonLink } from "@/components/ui/Button";
 import { company, jeddahImages } from "@/content/company";
@@ -14,25 +14,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-navy-900 py-20 text-ivory-50 sm:py-28">
-        <Container className="grid gap-12 lg:grid-cols-12 lg:items-end">
-          <div className="space-y-6 lg:col-span-7">
-            <Eyebrow tone="light">نبذة عن الشركة</Eyebrow>
-            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">{company.name}</h1>
-            <p className="max-w-xl text-xl text-ivory-100/85">{company.tagline}</p>
-          </div>
-          <dl className="grid grid-cols-2 gap-6 border-t border-ivory-50/15 pt-6 lg:col-span-5 lg:border-t-0 lg:pt-0">
-            <div>
-              <dt className="text-xs text-ivory-200/70">الخبرة في المجال العقاري</dt>
-              <dd className="num mt-1 text-2xl font-light">منذ {company.sinceHijri}</dd>
-            </div>
-            <div>
-              <dt className="text-xs text-ivory-200/70">المدينة</dt>
-              <dd className="mt-1 text-2xl font-light">{company.city}</dd>
-            </div>
-          </dl>
-        </Container>
-      </section>
+      <PageBanner title={company.name} lead={company.tagline} image={jeddahImages.corniche} />
 
       <section className="py-16 sm:py-24">
         <Container className="grid gap-12 lg:grid-cols-12">

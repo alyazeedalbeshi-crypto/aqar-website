@@ -101,7 +101,7 @@ export function PropertyFilters({
           لا توجد عقارات مطابقة لهذه التصفية.
         </p>
       ) : (
-        <div className="grid gap-x-10 gap-y-14 lg:grid-cols-2">
+        <div className="grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
           {filtered.map((p, i) => (
             <PropertyCard key={p.slug} property={p} priority={i < 2} />
           ))}

@@ -25,11 +25,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="ar" dir="rtl" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-ivory-100 text-ink">
-        <DemoBanner />
         <SiteHeader />
         <main id="main" className="flex-1">
           {children}
         </main>
+        <DemoBanner />
         <SiteFooter />
       </body>
     </html>

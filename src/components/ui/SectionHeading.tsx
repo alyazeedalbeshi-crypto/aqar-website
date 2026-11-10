@@ -17,10 +17,10 @@ export function SectionHeading({
   const titleColor = tone === "light" ? "text-ivory-50" : "text-navy-900";
   const leadColor = tone === "light" ? "text-ivory-200/85" : "text-muted";
   return (
-    <div className="max-w-3xl space-y-4">
+    <div className="max-w-2xl space-y-4">
       {eyebrow ? <Eyebrow tone={tone}>{eyebrow}</Eyebrow> : null}
-      <Tag className={`text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl ${titleColor}`}>{title}</Tag>
-      {lead ? <p className={`text-lg leading-relaxed ${leadColor}`}>{lead}</p> : null}
+      <Tag className={`text-[26px] font-bold leading-snug sm:text-[32px] ${titleColor}`}>{title}</Tag>
+      {lead ? <p className={`text-base leading-loose ${leadColor}`}>{lead}</p> : null}
     </div>
   );
 }

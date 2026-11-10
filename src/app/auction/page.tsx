@@ -25,10 +25,10 @@ export default function AuctionPage() {
       <section className="relative isolate overflow-hidden bg-navy-900 text-ivory-50">
         <Image src={jeddahImages.aerialNorth.src} alt="" fill sizes="100vw" priority className="object-cover object-center opacity-50" />
         <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-900/40" />
-        <Container className="relative grid gap-12 py-20 sm:py-28 lg:grid-cols-12 lg:items-end">
+        <Container className="relative grid gap-12 pb-16 pt-40 sm:pb-20 sm:pt-48 lg:grid-cols-12 lg:items-end">
           <div className="space-y-6 lg:col-span-7">
             <Eyebrow tone="light">المزاد الإلكتروني</Eyebrow>
-            <h1 className="text-5xl font-semibold leading-[1.1] sm:text-6xl lg:text-7xl">{auction.name}</h1>
+            <h1 className="text-4xl font-bold leading-tight sm:text-5xl">{auction.name}</h1>
             <p className="max-w-xl text-lg text-ivory-100/85">
               أربعة عقارات في أحياء الزهور والمروج والوفاء والعبير، تُطرح إلكترونيًا عبر {auction.platformName}.
             </p>

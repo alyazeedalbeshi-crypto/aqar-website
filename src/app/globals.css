@@ -15,18 +15,18 @@
   --color-navy-600: #214b80;
   --color-navy-500: #2f609c;
 
-  --color-ivory-50: #fbf9f4;
-  --color-ivory-100: #f5f1e8;
-  --color-ivory-200: #ebe4d4;
-  --color-ivory-300: #d9cfb8;
-  --color-ivory-400: #bfb299;
+  --color-ivory-50: #f8f7f4;
+  --color-ivory-100: #ffffff;
+  --color-ivory-200: #e8e6e1;
+  --color-ivory-300: #cfccc5;
+  --color-ivory-400: #a9a69f;
 
-  --color-sky-300: #9cc4ea;
-  --color-sky-400: #7fb2e5;
-  --color-sky-500: #5c97d1;
+  --color-sky-300: #c3cfdf;
+  --color-sky-400: #9fb3cc;
+  --color-sky-500: #6f8fb5;
 
   --color-ink: #0b1f3a;
-  --color-muted: #5b6474;
+  --color-muted: #6f7480;
 
   --tracking-wide-ar: 0.02em;
 }
@@ -45,7 +45,8 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-feature-settings: "kern", "liga", "calt";
-  line-height: 1.7;
+  line-height: 1.8;
+  font-weight: 300;
 }
 
 ::selection {
@@ -78,4 +79,12 @@ body {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* شريط تمرير أفقي بلا شريط ظاهر (شريط العقارات) */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

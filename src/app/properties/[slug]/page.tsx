@@ -38,7 +38,7 @@ export default async function PropertyPage({ params }: PageProps<"/properties/[s
     <>
       {/* الصورة الكبيرة */}
       <section className="relative isolate bg-navy-900 text-ivory-50">
-        <div className="relative aspect-[4/5] w-full sm:aspect-[16/9] lg:aspect-[21/9]">
+        <div className="relative h-[78svh] min-h-[520px] w-full">
           <Image
             src={property.image.src}
             alt={property.image.alt}
@@ -47,9 +47,9 @@ export default async function PropertyPage({ params }: PageProps<"/properties/[s
             sizes="100vw"
             className="object-cover"
           />
-          <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/30 to-transparent" />
+          <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/35 to-black/25" />
         </div>
-        <Container className="relative -mt-16 pb-12 sm:-mt-36">
+        <Container className="relative -mt-44 pb-12 sm:-mt-52">
           <nav aria-label="مسار الصفحة" className="mb-6 text-sm text-ivory-200/80">
             <ol className="flex flex-wrap items-center gap-2">
               <li>
@@ -68,7 +68,7 @@ export default async function PropertyPage({ params }: PageProps<"/properties/[s
               <Eyebrow tone="light">
                 العقار {["الأول", "الثاني", "الثالث", "الرابع"][property.order - 1] ?? property.order} · {PROPERTY_TYPE_LABELS[property.type]} · حي {property.district}
               </Eyebrow>
-              <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">{property.name}</h1>
+              <h1 className="text-4xl font-bold leading-tight sm:text-5xl">{property.name}</h1>
               <p className="text-xl text-ivory-100/90">{property.frontage}</p>
               <div className="flex flex-wrap items-center gap-3 pt-1">
                 <AuctionStatusBadge tone="light" />

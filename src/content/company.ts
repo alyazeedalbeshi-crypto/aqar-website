@@ -37,7 +37,7 @@ export const company = {
 } as const;
 
 export const jeddahImages = {
-  corniche: { src: "/images/jeddah/jeddah-corniche.jpg", alt: "كورنيش جدة من الجو", width: 2400, height: 1600 },
+  corniche: { src: "/images/jeddah/jeddah-corniche-v2.jpg", alt: "كورنيش جدة من الجو", width: 2400, height: 1600 },
   aerialNorth: { src: "/images/jeddah/jeddah-aerial-north.jpg", alt: "شمال جدة من الجو", width: 1381, height: 1727 },
   babMakkah: { src: "/images/jeddah/jeddah-bab-makkah.jpg", alt: "بوابة جدة التاريخية", width: 856, height: 534 },
   gateFlag: { src: "/images/jeddah/jeddah-gate-flag.jpg", alt: "بوابة تاريخية في جدة يعلوها العلم السعودي", width: 606, height: 385 },
